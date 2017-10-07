@@ -1,0 +1,197 @@
+/*
+ *这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义；
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+.mui-plus header.mui-bar{
+	display: none;
+}
+.mui-plus .mui-bar-nav~.mui-content{
+	padding: 0;
+}
+
+/*hm开头的表示仅为 Hello MUI示例定义*/
+.hm-description{
+	margin: .5em 0;
+}
+
+.hm-description>li {
+	font-size: 14px;
+	color: #8f8f94;
+}
+
+/*******************************全局css*********************************/
+/*
+ 阴影效果
+ * */
+.shadow
+{
+	box-shadow: 5px 5px 5px #888888;
+	border: 0px;
+}
+
+div
+{
+	text-align: center;
+}
+
+table 
+{
+	border: 1px solid #222222;
+	width: 95%;
+	position: relative;
+	left: 11px;
+}
+table td
+{
+	border: 1px solid #222222;
+}
+
+/*设置列表高亮颜色*/
+.mui-table-view-cell.mui-active{
+	background-color: #FFFFFF;
+}
+
+.icon_red
+{
+	color:red
+}
+
+.icon_green
+{
+	color:green
+}
+
+
+/****************************实时数据***************************/
+/*
+ 实时数据标题
+ * */
+.grid-title
+{
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+.grid-cell
+{
+	height:36%;
+	margin-bottom: 5px !important;;  
+	padding: 8px 20px 5px 20px !important;
+	background-color: #E8E8E8 !important;
+	border:5px solid #f2f2f2;
+} 	
+
+.grid-cell-button
+{
+	width: 100%;
+	height: 60px;
+	font-size: 25px;
+}
+
+.grid-cell-h5
+{
+	position:relative; 
+	top:0px;
+	padding-left: 16px;
+}
+
+.grid-cell-detail
+{
+	float: right;
+	padding-top: 3px;
+}
+
+.grid-cell-warn-title
+{
+	  margin: 20px 0px 20px 0px;
+}
+
+.grid-cell-warn-table tr
+{
+	color: black;
+}
+
+.tr_warn
+{
+	background-color: orangered;
+}
+
+/*
+ 分页按钮
+ * */
+.grid-pager
+{
+	  width: 100px;
+	  height: 50px;
+	  line-height: 40px;
+	  font-size: 17px;
+}
+
+.mui-icon
+{
+	font-size: 1.4em !important;
+}
+
+/***************************弹出菜单***************************/
+.mui-popover table
+{
+	border: 0px;
+}
+
+.mui-popover table td
+{
+	border: 0px;
+}
+
+/*
+ * 设置弹出菜单的高度
+ * */
+.mui-popover
+ {
+	height: 300px;
+}
+
+.mui-popover li.mui-table-view-cell
+{
+	padding: 10px 5px;
+}
+
+.mui-popover .header .popover_tool
+{
+	border-right: 1px solid black;
+	width: 40%;
+}
+
+.mui-popover .header .popover_data
+{
+	border-right: 1px solid black;
+	width: 25%;
+}
+
+.mui-popover .header .popover_time
+{
+	width: 35%;
+}
+
+.mui-popover .body .popover_tool
+{
+	border-right: 1px solid black;
+	width: 40%;
+	font-size: 15px;
+}
+
+.mui-popover .body .popover_data
+{
+	border-right: 1px solid black;
+	width: 25%;
+	font-size: 15px;
+}
+
+.mui-popover .body .popover_time
+{
+	width: 35%;
+	font-size: 15px;
+}
+
+/**************************综合报表****************************/

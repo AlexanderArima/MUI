@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>报告</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<link rel="stylesheet" href="../css/report.css" />
+        <style type="text/css">
+ .area{float:left;height:60px;line-height:60px;font-size:25px;border:none;color:black;background:#F2F2F2;margin:10px;}
+ .area_1{float:left;height:60px;line-height:60px;font-size:25px;border:none;color:black;background:#F2F2F2;margin:10px;}
+ .area_1_1{float:left;height:60px;line-height:60px;font-size:25px;border:none;color:black;background:#F2F2F2;margin:10px;}
+ .date_1{float:left;height:60px;line-height:60px;font-size:25px;border:none;color:black;background:#F2F2F2;margin:10px;}
+    </style>
+	</head>
+
+	<body>
+
+<!-- 侧滑导航根容器 -->
+<div  class="mui-off-canvas-wrap mui-draggable">
+  <!-- 主页面容器 -->
+  <div class="mui-inner-wrap">
+     <!-- 菜单容器 -->
+    <aside id="offSlide" class="mui-off-canvas-right" style="background:none;width:100%;">
+      <div class="mui-scroll-wrapper" id="onePlant" style="visibility: hidden;">
+        <div class="mui-scroll" >
+          <!-- 菜单具体展示内容 -->
+          <ul class="mui-table-view" >
+				<li class="mui-table-view-cell">2017年8月马鞍山低温工厂纯水能耗报表</li>
+				<li class="mui-table-view-cell">
+					<div id="main1_1" style="left:20px;width:90%;top:20px;height:300px;margin:0 auto;"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div id="main4_1" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+					<div id="main4_2" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+				</li>
+
+				 <li class="mui-table-view-cell">
+				 <div id="chart1" style="width: 100%; height: 300px; float: left;"> </div>
+				</li>
+			  <li class="mui-table-view-cell">
+					<table class="table_header">
+						<tr>
+							<td class="td1">日期</td>
+							<td class="td2">产量(T)</td>
+							<td class="td3">软水耗用(TCE)</td>
+						</tr>
+					</table>
+				</li>
+				<li class="mui-table-view-cell">
+					<table>
+						<tr>
+							<td class="td1">2017-8-31</td>
+							<td class="td2">180</td>
+							<td class="td3">30</td>
+					</tr>
+					</table>
+				</li>
+				<li class="mui-table-view-cell">
+					<table>
+						<tr>
+							<td class="td1">2017-8-30</td>
+							<td class="td2">165</td>
+							<td class="td3">20</td>
+						</tr>
+					</table>
+				</li>
+				<li class="mui-table-view-cell">
+					<table>
+						<tr>
+							<td class="td1">2017-08-29</td>
+							<td class="td2">197</td>
+							<td class="td3">30</td>
+						</tr>
+					</table>
+				</li>
+				<li class="mui-table-view-cell">
+					<table>
+						<tr>
+							<td class="td1">2017-8-28</td>
+							<td class="td2">178</td>
+							<td class="td3">24</td>
+						</tr>
+					</table>
+				</li>
+				<li class="mui-table-view-cell">
+					<table>
+						<tr>
+							<td class="td1">2017-08-27</td>
+							<td class="td2">189</td>
+							<td class="td3">33</td>
+						</tr>
+					</table>
+				</li>
+								<div class="mui-content-padded">
+
+									<ul class="mui-pager">
+										<li class="mui-previous">
+											<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined grid-pager" style="  left: -50px;">
+												上一页
+											</button>
+										</li>
+										<li class="mui-next">
+											<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined grid-pager" style="  right: -50px;">
+												下一页
+											</button>
+										</li>
+						</ul>
+						
+			</div>
+         
+        </div>
+      </div>
+          <div class="mui-scroll-wrapper" id="twoPlant" style="visibility: hidden;position:absolute;top:0;left:0;z-index:10;">
+        <div class="mui-scroll" >
+          <!-- 菜单具体展示内容 -->
+          <ul class="mui-table-view" >
+				<li class="mui-table-view-cell">2017年一季度马鞍山与泰安低温工厂用电能耗报表</li>
+				<li class="mui-table-view-cell">
+					<div id="main1_2" style="left:20px;width:90%;top:20px;height:300px;margin:0 auto;"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div id="main4_1_1" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+					<div id="main4_2_2" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div id="main4_1_3" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+					<div id="main4_2_4" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div id="main1_3" style="left:20px;width:90%;top:20px;height:300px;margin:0 auto;"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div id="main1_4" style="left:20px;width:90%;top:20px;height:300px;margin:0 auto;"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div id="main4_1_5" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+					<div id="main4_1_6" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+				</li>
+					<li class="mui-table-view-cell">
+					<div id="main4_1_7" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+					<div id="main4_1_8" style="float:left;left:20px;width:50%;top:20px;height:300px"></div>
+				</li>
+		  </ul>
+		</div>
+		</div>
+    </aside>
+    <!-- 主页面标题 
+    <header class="mui-bar mui-bar-nav">
+    
+      <h1 class="mui-title">报表</h1>
+    </header>-->
+    <!-- 主页面内容容器 -->
+    <div class="mui-content mui-scroll-wrapper" style="background:white;">
+<div id="area1"> 
+	<div class="area" style="display:block;">常温工厂</div><div class="area" id="lowTemp" style="background: #007AFF;">低温工厂</div><div class="area">冰激凌工厂</div>	
+	<div style="clear:both;"></div>
+	<div id="workshop" style="display: none;"><div class="area_1" > 华东工厂</div><div class="area_1" id="area_1" > 华中工厂</div><div class="area_1" > 华北工厂</div><div class="area_1" > 华南工厂</div> </div>
+	<div style="clear:both;"></div>
+    <div id="workshop_1" style="display: none;"><div class="area_1_1" id="area_tai"> 泰安低温厂</div><div class="area_1_1" id="area_ma"> 马鞍山低温厂</div></div>
+<div>
+	<div style="clear:both;"></div>
+<div id="type"> 
+	<div class="area" style="">水</div><div class="area">电</div><div class="area">蒸汽</div>	
+	<div style="clear:both;"></div>
+	<div id="workshop"><div class="area_1" >纯水</div><div class="area_1" > 软水</div></div>
+	<div id="electric" class="area_1">工业用电</div></div>
+	<div style="clear:both;"></div>
+ 
+<div>
+	<div id="date"> 
+	<div class="area">2017年</div><div class="area">2016年</div><div class="area">2015年</div>	
+	<div style="clear:both;"></div>
+	<div id="workshop"><div class="date_1" >1月</div><div class="date_1" > 2月</div><div class="date_1" > 3月</div><div class="date_1" > 4月</div>
+	<div class="date_1" > 5月</div><div class="date_1" > 6月</div><div class="date_1" > 7月</div><div class="date_1" > 8月</div>
+
+	</div>
+	
+	<div style="clear:both;"></div>
+ 
+<div>
+			
+    <a href="#offSlide" style="height:50px;line-height:50px;margin:0 auto;color:white;background: dodgerblue;font-size:30px;border-radius: 2px;padding:10px;">生成报表</a>
+        
+   </div>
+</div>     
+      </div>
+    </div>  
+  </div>
+</div>
+	
+		<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.js"></script>
+		<script type="text/javascript" src="../js/mui.poppicker.js"></script>
+	    <script type="text/javascript" src="../libs/echarts-all.js"></script>
+	    	<script type="text/javascript" src="../js/report.js"></script>
+		<script type="text/javascript">
+		
+			
+			
+	mui("#area1").on('tap', '#lowTemp', function(event){
+		
+		if($("#workshop").css('display') == 'none'){
+			$("#workshop").show();
+			$("#lowTemp").css("color","white");
+			$("#lowTemp").css("background","#007AFF");
+		}else{$("#workshop").hide();}
+	
+});
+	mui("#workshop").on('tap', '#area_1', function(event){
+		
+		if($("#workshop_1").css('display') == 'none'){
+			$("#workshop_1").show();
+			$("#area_1").css("color","white");
+			$("#area_1").css("background-color","#007AFF");
+		}else{$("#workshop_1").hide();}
+	
+});
+mui("#workshop_1").on('tap', "#area_tai", function(event){	
+				if($("#area_tai").css("background-color")==="rgb(0, 122, 255)"){
+				
+				$("#area_tai").css("background-color","#F2F2F2")
+				$("#area_tai").css("color","black");
+			}else{$("#area_tai").css("background-color","#007AFF");
+			$("#area_tai").css("color","white");
+			$("#onePlant").css("visibility","visible"); 
+		  $("#twoPlant").css("visibility","hidden"); 
+			}
+			
+});	
+mui("#workshop_1").on('tap', "#area_ma", function(event){	
+				
+			if($("#area_ma").css("background-color")==="rgb(0, 122, 255)"){
+			
+				$("#area_ma").css("background-color","#F2F2F2");
+				$("#area_ma").css("color","black");
+		     
+			}else{$("#area_ma").css("background-color","#007AFF");
+			$("#area_ma").css("color","white")
+			$("#twoPlant").css("visibility","visible"); 
+			$("#onePlant").css("visibility","hidden"); 
+			}
+			
+});
+mui.init()
+		  
+  mui('.mui-scroll-wrapper').scroll();
+		</script>
+		
+		</body>
+
+</html>

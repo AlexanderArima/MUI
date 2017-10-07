@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../css/energy_analysis.css" />
+	</head>
+
+	<body>
+		<div style="height: 100%;width:100%;">
+			<!-- 菜单 -->
+			<ul class="mui-table-view mui-grid-view mui-grid-9" style="position: absolute;z-index: 2;">
+				<!-- 一级菜单 -->
+				<li id="li_nav1" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll">
+							<a class="mui-control-item mui-active" index="0">
+								KPI分析
+							</a>
+							<a class="mui-control-item" index="1">
+								能耗对比
+							</a>
+							<a class="mui-control-item" index="2">
+								成本分析
+							</a>
+							<a class="mui-control-item" index="3">
+								趋势预测
+							</a>
+						</div>
+					</div>
+				</li>
+				<!-- 二级菜单 -->
+				<li id="li_nav2" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll">
+							<a class="mui-control-item" index="0" href="analysis_group.html">
+								集团
+							</a>
+							<a class="mui-control-item" index="1">
+								华东
+							</a>
+							<a class="mui-control-item mui-active" index="2" href="energy_analysis.html">
+								华中
+							</a>
+							<a class="mui-control-item" index="3">
+								华北
+							</a>
+							<a class="mui-control-item" index="4mui-control-item" href="energy_compare.html">
+								华南
+							</a>
+						</div>
+					</div>
+				</li>
+				<!-- 三级菜单 -->
+				<li id="li_nav3" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll">
+							<a class="mui-control-item mui-active">
+								马鞍山常温厂
+							</a>
+							<a class="mui-control-item">
+								马鞍山低温厂
+							</a>
+							<a class="mui-control-item">
+								泰安低温厂
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view mui-grid-view mui-grid-9" id="ul_one" style="position: absolute;z-index: 1;top:6%;">
+				<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-6 grid-cell">
+					<div>
+						<div class="div_title">全厂能源总消耗</div>
+						<div class="div_select">
+							<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined button_month">月份</button>
+							<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined button_day">天</button>
+						</div>
+					</div>
+					<div>
+						<div id="div_level_1_1" style="left:20px;width:100%;top:20px;height:300px"></div>
+					</div>
+					<div style="text-align: right;">
+						<a>详情</a>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-6 grid-cell">
+					<div>
+						<div style="float: left;display: block;position:relative;left: 0px;width: 140px;">全厂能源单吨能耗</div>
+						<div style="float: right;width: 130px;">
+							<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined button_month">月份</button>
+							<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined button_day">天</button>
+						</div>
+					</div>
+					<div>
+						<div id="div_level_1_2" style="left:20px;width:100%;top:20px;height:300px"></div>
+					</div>
+					<div style="text-align: right;">
+						<a>详情</a>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view mui-grid-view mui-grid-9" id="ul_two" style="position: absolute;z-index: 1;top: 40%;">
+				<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-4 grid-cell">
+					<div>
+						<div class="div_title" >全厂产能能耗</div>
+						<div class="div_select">
+							<button type="button" style="right: -30px;" class="mui-btn mui-btn-primary mui-btn-outlined button_month">月份</button>
+						</div>
+					</div>
+					<div>
+						<div id="div_level_2_1" style="left:20px;width:100%;top:20px;height:220px"></div>
+					</div>
+					<div style="text-align: right;">
+						<a>详情</a>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-4 grid-cell">
+					<div>
+						<div class="div_title">全厂能源结构</div>
+						<div class="div_select">
+							<button type="button" style="right: -30px;" class="mui-btn mui-btn-primary mui-btn-outlined button_month">月份</button>
+						</div>
+					</div>
+					<div>
+						<div id="div_level_2_2" style="left:20px;width:100%;top:20px;height:220px"></div>
+					</div>
+					<div style="text-align: right;">
+						<a>详情</a>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-4 grid-cell">
+					<div>
+						<div class="div_title">全厂生产工段能耗</div>
+						<div class="div_select">
+							<button type="button" style="right: -30px;" class="mui-btn mui-btn-primary mui-btn-outlined button_month">月份</button>
+						</div>
+					</div>
+					<div>
+						<div id="div_level_2_3" style="left:20px;width:100%;top:20px;height:220px"></div>
+					</div>
+					<div style="text-align: right;">
+						<a>详情</a>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view mui-grid-view mui-grid-9"  id="ul_one" style="position: absolute;z-index: 1;top: 67%;height: 64%;">
+				<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-6 grid-cell">
+					<div>
+						<div class="div_title">全厂单品单吨能耗</div>
+						<div class="div_select">
+							<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined button_month">月份</button>
+							<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined button_day">天</button>
+						</div>
+					</div>
+					<div>
+						<div id="div_level_3_1" style="left:20px;width:100%;top:20px;height:300px"></div>
+					</div>
+					<div style="text-align: right;">
+						<a>详情</a>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-6 grid-cell">
+					<div>
+						<div style="float: left;display: block;position:relative;left: 0px;width: 140px;">全厂能源单吨能耗</div>
+						<div style="float: right;width: 130px;">
+							<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined button_month">月份</button>
+							<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined button_day">天</button>
+						</div>
+					</div>
+					<div>
+						<div id="div_level_3_2" style="left:20px;width:100%;top:20px;height:300px"></div>
+					</div>
+					<div style="text-align: right;">
+						<a>详情</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.js"></script>
+		<script type="text/javascript" src="../js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../libs/echarts-all.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script type="text/javascript" src="../js/energy_analysis.js"></script>
+	</body>
+
+</html>

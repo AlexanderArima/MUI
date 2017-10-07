@@ -1,0 +1,29 @@
+.mui-col-sm-7 .div_title
+{
+	float: left;
+	display: block;
+	position:relative;
+	left: 0px;
+	width: 140px;
+}
+
+.mui-col-sm-7 .div_select
+{
+	float: right;
+	width: 150px;
+}
+
+.mui-col-sm-5 .div_title
+{
+	float: left;
+	display: block;
+	position:relative;
+	left: 0px;
+	width: 140px;
+}
+
+.mui-col-sm-5  .div_select
+{
+	float: right;
+	width: 130px;
+}

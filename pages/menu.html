@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+		<!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+		<style type="text/css">
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			p {
+				text-indent: 22px;
+			}
+			
+			.mui-ios header {
+				padding-top: 8px !important;
+			}
+			
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			
+			.mui-off-canvas-left {
+				color: #fff;
+			}
+			
+			.title {
+				margin: 35px 15px 10px;
+			}
+			
+			.title+.content {
+				margin: 10px 15px 35px;
+				color: #bbb;
+				text-indent: 1em;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			
+			input {
+				color: #000;
+			}
+			
+			.mui-backdrop {
+				position: relative;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				background-color: rgba(0, 0, 0, 0);
+			}
+			
+			.menuitem {
+				flex-direction: column;
+				text-align: center;
+				height: 17%;
+			}
+			
+			.menuitem-img {
+				padding: 10px;
+				padding-top: 35px;
+				padding-bottom: 1px;
+			}
+			
+			.menuitem-font {
+				opacity: 0.5;
+			}
+			/*此样式决定iframe中的子页面是否可以滚动*/
+			
+			.mui-scroll-wrapper {
+				-webkit-overflow-scrolling: touch;
+				overflow-y: scroll;
+				/* 提示: 请在此处加上需要设置的大小(dimensions)或位置(positioning)信息! */
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 菜单容器 -->
+			<aside id="offCanvasSide" class="mui-off-canvas-left" style="width:100px">
+				<!--style="background-color: deepskyblue;"-->
+				<div class="mui-scroll-wrapper" style="background: url('../img/jx9.png') ">
+					<div class="mui-scroll" style="flex-direction:column;height: 100%;">
+						<div id="mainMenu" style="height: 100%;">
+							<div id="logo" style="flex-direction:column ;background-color:white ;height: 15%;">
+								<!--border:3px,3px,3px,3px solid deepskyblue;-->
+								<img src="../img/logo2.png" style="padding:12px;padding-top:20px;" />
+
+							</div>
+							<div id="home" class="menuitem">
+								<!--style="background-color:#4A82D1"-->
+								<img id='imghome' class="menuitem-img" src="../img/Home1.png" />
+								<font id='fonthome' class='menuitem-font' color="white" size="5" style='opacity: 1;'><strong>主 页</strong></font>
+							</div>
+							<div id="monitoring" class="menuitem">
+								<img id='imgmonitoring' class="menuitem-img" src="../img/jk2.png" />
+								<font id='fontmonitoring' class='menuitem-font' color="white" size="5"><strong>实时监控</strong></font>
+							</div>
+							<div id="report" class="menuitem">
+								<img id='imgreport' class="menuitem-img" src="../img/bb2.png" />
+								<font id='fontreport' class='menuitem-font' color="white" size="5"><strong>报 表</strong></font>
+							</div>
+							<div id="datasearch" class="menuitem">
+								<img id='imgdatasearch' class="menuitem-img" src="../img/ss2.png" />
+								<font id='fontdatasearch' class='menuitem-font' color="white" size="5"><strong>数据搜索</strong></font>
+							</div>
+							<div id="kpi" class="menuitem">
+								<img id='imgkpi' class="menuitem-img" src="../img/kpi2.png" />
+								<font id='fontkpi' class='menuitem-font' color="white" size="5"><strong>能耗分析</strong></font>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</aside>
+
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+					<!--<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">关闭</a>-->
+					<h1 class="mui-title"><font id="itemTitle" size="5"><strong>主&nbsp;页</strong></font></h1>
+				</header>
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll" style="width:100%;height: 100%;">
+						<!-- 主界面具体展示内容 -->
+
+						<iframe id="myframe" frameborder=0 marginheight=0 marginwidth=0 src="home.html" style="width:100%;height: 100%;"></iframe>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.js"></script>
+		<script type="text/javascript" src="../js/mui.poppicker.js"></script>
+		<script src="../js/update.js" type="text/javascript" charset="utf-8"></script>
+		<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+		<script src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<!-- 包括所有已编译的插件 -->
+		<!--<script src="js/bootstrap.min.js"></script>-->
+		<script type="text/javascript">
+//			function setIframeHeight(iframe) {
+//				if(iframe) {
+//					var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+//					if(iframeWin.document.body) {
+//						iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+//					}
+//				}
+//			};
+
+			function changeFram(url, title) {
+				var $window = $("#myframe");
+				$window.attr("src", url);
+				//更改IFram
+				document.getElementById('itemTitle').innerHTML = '<strong>' + title + '</strong>';
+				mui('.mui-off-canvas-wrap').offCanvas().close();
+				//setIframeHeight(document.getElementById('myframe'));
+
+			}
+
+			//			window.onload = function(){
+			//			mui('.mui-scroll-wrapper').scroll({
+			//			deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+			//			});
+			//			}
+
+			//选中项颜色变化
+			function changeMenuFocus(id) {
+
+				//触控后按钮背景颜色变化
+				var home = document.getElementById('home');
+				var kpi = document.getElementById('kpi');
+				var monitoring = document.getElementById('monitoring');
+				var datasearch = document.getElementById('datasearch');
+				var report = document.getElementById('report');
+
+				//				home.style.backgroundColor = "deepskyblue";
+				//				kpi.style.backgroundColor = "deepskyblue";
+				//				monitoring.style.backgroundColor = "deepskyblue";
+				//				datasarch.style.backgroundColor = "deepskyblue";
+				//				report.style.backgroundColor = "deepskyblue";
+
+				//触控后选中菜单项图标变亮
+				var imghome = document.getElementById('imghome');
+				var imgkpi = document.getElementById('imgkpi');
+				var imgmonitoring = document.getElementById('imgmonitoring');
+				var imgdatasearch = document.getElementById('imgdatasearch');
+				var imgreport = document.getElementById('imgreport');
+
+				var fonthome = document.getElementById('fonthome');
+				var fontkpi = document.getElementById('fontkpi');
+				var fontmonitoring = document.getElementById('fontmonitoring');
+				var fontdatasearch = document.getElementById('fontdatasearch');
+				var fontreport = document.getElementById('fontreport');
+
+				imghome.src = '../img/Home2.png';
+				imgkpi.src = '../img/kpi2.png';
+				imgmonitoring.src = '../img/jk2.png';
+				imgdatasearch.src = '../img/ss2.png';
+				imgreport.src = '../img/bb2.png';
+
+				fonthome.style.opacity = 0.5;
+				fontkpi.style.opacity = 0.5;
+				fontmonitoring.style.opacity = 0.5;
+				fontdatasearch.style.opacity = 0.5;
+				fontreport.style.opacity = 0.5;
+
+				if(id == "home") {
+					//home.style.backgroundColor = "#4A82D1";
+					imghome.src = '../img/Home1.png';
+					fonthome.style.opacity = 1;
+
+				}
+				if(id == "kpi") {
+					//kpi.style.backgroundColor = "#4A82D1";
+					imgkpi.src = '../img/kpi1.png';
+					fontkpi.style.opacity = 1;
+				}
+				if(id == "monitoring") {
+					//monitoring.style.backgroundColor = "#4A82D1";
+					imgmonitoring.src = '../img/jk1.png';
+					fontmonitoring.style.opacity = 1;
+				}
+				if(id == "datasearch") {
+					//datasarch.style.backgroundColor = "#4A82D1";
+					imgdatasearch.src = '../img/ss1.png';
+					fontdatasearch.style.opacity = 1;
+				}
+				if(id == "report") {
+					//report.style.backgroundColor = "#4A82D1";
+					imgreport.src = '../img/bb1.png';
+					fontreport.style.opacity = 1;
+				}
+			} 
+
+			mui.init();
+
+			mui.plusReady(function() {
+				var wv = plus.webview.currentWebview();
+				// 关闭侧滑返回功能
+				wv.setStyle({
+					'popGesture': 'none'
+				});
+			});
+
+			//默认开启菜单栏
+			mui('.mui-off-canvas-wrap').offCanvas().show();
+
+			mui("#mainMenu").on('tap', '#home', function() {
+				changeFram("home.html", '主  页');
+				changeMenuFocus("home");
+
+			});
+			mui("#mainMenu").on('tap', '#monitoring', function() {
+				changeFram("monitoring.html", '监  测');
+				changeMenuFocus("monitoring");
+			});
+			mui("#mainMenu").on('tap', '#kpi', function() {
+				changeFram("energy_analysis.html", '能耗分析');
+				changeMenuFocus("kpi");
+			});
+			mui("#mainMenu").on('tap', '#datasearch', function() {
+				changeFram("datasearch.html", '数据检索');
+				changeMenuFocus("datasearch");
+
+			});
+			mui("#mainMenu").on('tap', '#report', function() {
+				changeFram("report.html", '报  表');
+				changeMenuFocus("report");
+
+			});
+
+			//		(function($){
+			//		    $(".mui-scroll-wrapper").scroll({
+			//		        //bounce: false,//滚动条是否有弹力默认是true
+			//		        //indicators: false, //是否显示滚动条,默认是true
+			//		    }); 
+			//		})(mui);
+
+			//			mui('#offCanvasSideScroll').scroll();
+			//			mui('#offCanvasContentScroll').scroll();
+		</script>
+	</body>
+
+</html>

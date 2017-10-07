@@ -1,0 +1,101 @@
+
+       /* 区域未激活样式 */
+       .mui-segmented-control.mui-scroll-wrapper .mui-scroll{height:70px;}
+       .mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted
+       {height:70px;}
+       .mui-control-item.area{height:70px;line-height:70px;margin:0 auto;font-size:30px;}
+     /* 区域未激活样式 */
+       .mui-table-view.mui-grid-view.mui-grid-9
+       .mui-table-view-cell.mui-media.mui-col-xs-12.mui-col-sm-12.grid-cell
+       .mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted
+       .mui-scroll
+       .mui-control-item.area{color:black;background:#F2F2F2;border:none;}
+      /* 区域激活样式 */
+       .mui-table-view.mui-grid-view.mui-grid-9
+       .mui-table-view-cell.mui-media.mui-col-xs-12.mui-col-sm-12.grid-cell
+       .mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted
+       .mui-scroll
+       .mui-control-item.area.mui-active{color:white;background:#007AFF}
+          /* 类型未激活样式 */
+       .mui-segmented-control.mui-scroll-wrapper .mui-scroll{height:70px;}
+       .mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted
+       {height:70px;}
+       .mui-control-item.type{height:70px;line-height:70px;margin:0 auto;font-size:30px;border:none;color:black;background:#F2F2F2;}
+
+      /* 类型激活样式 */
+       .mui-table-view.mui-grid-view.mui-grid-9
+       .mui-table-view-cell.mui-media.mui-col-xs-12.mui-col-sm-12.grid-cell
+       .mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted
+       .mui-scroll
+       .mui-control-item.type.mui-active{color:white;background:#009966;border:none;}
+      /* 时间未激活样式 */
+       .mui-segmented-control.mui-scroll-wrapper .mui-scroll{height:70px;}
+       .mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted
+       {height:70px;}
+       .mui-control-item.date{height:70px;line-height:70px;margin:0 auto;font-size:30px;color:black;background:#F2F2F2;border:none;}
+
+      /* 时间激活样式 */
+       .mui-table-view.mui-grid-view.mui-grid-9
+       .mui-table-view-cell.mui-media.mui-col-xs-12.mui-col-sm-12.grid-cell
+       .mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted
+       .mui-scroll
+       .mui-control-item.date.mui-active{color:white;background:#FF9900;border:none;}
+
+
+
+/* 侧边样式 */
+div
+{
+	text-align: center;
+}
+
+
+table 
+{
+	border: 0px solid #222222;
+	width: 90%;
+	position: relative;
+	left: 11px;
+}
+
+table td
+{
+	border: 0px solid #222222;
+	border-right: 1px solid black;
+}
+
+table td:last-child
+{
+	border: 0px solid #222222;
+	border-right: 0px solid black;
+}
+
+/*设置列表高亮颜色*/
+.mui-table-view-cell.mui-active{
+	background-color: #FFFFFF;
+}
+
+.td1
+{
+	width: 20%;
+}
+
+.td2
+{
+	width: 20%;
+}
+
+.td3
+{
+	width: 20%;
+}
+
+.td4
+{
+	width: 20%;
+}
+
+.td5
+{
+	width: 20%;
+}

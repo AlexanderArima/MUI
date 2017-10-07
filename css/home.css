@@ -1,0 +1,105 @@
+div {
+	text-align: center;
+}
+
+li {
+	list-style: none;
+}
+
+
+/****************************标题头***************************/
+
+#div_title {
+	padding-right: 20px;
+	margin-top: 10px;
+}
+
+.div_menu_o div {
+	font-size: 35px;
+	color: dodgerblue;
+	padding-top: 10px;
+}
+
+.div_type {
+	background-color: gainsboro
+}
+
+.div_menu_th span
+{
+	font-size: 35px;
+	color: white;
+}
+
+.div_type img {
+	width: 10%;
+}
+
+.mui-col-sm-4                           div        
+ {
+	margin-bottom: 10px;
+}
+
+#div_level_one .mui-icon-info
+{
+	  display: block;
+	  position: relative;
+	  top: -8px !important;
+	  left: 145px;
+	  width: 50px;
+}
+
+#div_level_one .mui-icon-list
+{
+	  display: block;
+	  position: relative;
+	  top: -30px !important;
+	  left: 230px !important;;
+	  width: 50px;
+}
+
+#div_level_one .mui-table-view-cell
+{
+	background-color: dodgerblue;  
+	padding: 20px;
+	height: 340px !important;
+}
+
+#div_level_two .mui-icon-info
+{
+	  display: block;
+	  position: relative;
+	  top: -5px !important;
+	  left: 146px;
+	  font-size: 25px;
+	  width: 50px;
+}
+
+.span_percent 
+{
+	  display: block;
+	  top: -15px !important;
+	  position: relative;
+}
+
+#div_level_two .mui-table-view-cell
+{
+	background-color: dodgerblue;  
+	padding: 20px;
+	height: 120px;
+}
+
+#div_level_two .mui-col-sm-4
+{
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+#div_level_three .mui-icon-info
+{
+	  display: block;
+	  position: relative;
+	  top: -5px !important;
+	  left: 105px;
+	  font-size: 25px;
+	  width: 50px;
+}

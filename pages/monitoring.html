@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>实时数据</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../css/app.css" />
+	</head>
+
+	<body>
+		<div style="height: 100%;width:100%;">
+			<!-- 菜单 -->
+			<ul class="mui-table-view mui-grid-view mui-grid-9" style="position: absolute;z-index: 2;">
+				<!-- 一级菜单 -->
+				<li id="li_nav1" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll">
+							<a class="mui-control-item mui-active" index="0">
+								泰安低温厂
+							</a>
+							<a class="mui-control-item" index="1">
+								马鞍山低温厂
+							</a>
+							<a class="mui-control-item" index="2">
+								马鞍山常温厂
+							</a>
+						</div>
+					</div>
+				</li>
+				<!-- 二级菜单 -->
+				<li id="li_nav2" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll">
+							<a class="mui-control-item mui-active" index="0">
+								收奶
+							</a>
+							<a class="mui-control-item" index="1">
+								配料
+							</a>
+							<a class="mui-control-item" index="2">
+								混料
+							</a>
+							<a class="mui-control-item" index="3">
+								发酵
+							</a>
+							<a class="mui-control-item" index="4mui-control-item">
+								能源系统
+							</a>
+						</div>
+					</div>
+				</li>
+				<!-- 三级菜单 -->
+				<li id="li_nav3" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll">
+							<a class="mui-control-item mui-active">
+								巴杀机
+							</a>
+							<a class="mui-control-item">
+								混料线
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- 实时数据 -->
+			<ul class="mui-table-view mui-grid-view mui-grid-9" style="position: absolute;z-index: 1;top: 9%;">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 grid-cell">
+					<div class="mui-collapse-content">
+						<h4 class="grid-title">瞬时消耗水量</h4>
+						<h2 style="color: dodgerblue;">0.15  吨</h2>
+						<div>
+							<h5 class="grid-cell-h5">
+								<span class="mui-icon mui-icon-arrowup icon_red"></span>同比上升2.0%
+								<span class="grid-cell-detail"><a href="#popover_water">详情</a></span>
+							</h5>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 grid-cell" >
+					<div class="mui-collapse-content">
+						<h4 class="grid-title">瞬时消耗电量</h4>
+						<h2 style="color: goldenrod;">0.2  度</h2>
+						<div>
+							<h5 class="grid-cell-h5">
+								<span class="mui-icon mui-icon-arrowup icon_red"></span>同比上升2.0%
+								<span class="grid-cell-detail"><a href="#popover_elec">详情</a></span>
+							</h5>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 grid-cell" >
+					<div class="mui-collapse-content">
+						<h4 class="grid-title">瞬时消耗蒸汽量</h4>
+						<h2 style="color: orangered;">0.03  立方米</h2>
+						<div>
+							<h5 class="grid-cell-h5">
+								<span class="mui-icon mui-icon-arrowup icon_red"></span>同比上升2.0%
+								<span class="grid-cell-detail"><a href="#popover_steam">详情</a></span>
+							</h5>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-4 grid-cell" >
+					<div class="mui-collapse-content">
+						<h4 class="grid-title">设备故障率</h4>
+						<h2 style="color:limegreen;">15%</h2>
+						<div>
+							<h5 class="grid-cell-h5">
+								<span class="mui-icon mui-icon-arrowdown icon_green"></span>同比下降2.0%
+								<span class="grid-cell-detail"><a>详情</a></span>
+							</h5>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-4 grid-cell" >
+					<div class="mui-collapse-content">
+						<h4 class="grid-title">设备利用率</h4>
+						<h2 style="color: forestgreen;">87.5%</h2>
+						<div>
+							<h5 class="grid-cell-h5">
+								<span class="mui-icon mui-icon-arrowup icon_red"></span>同比上升2.0%
+								<span class="grid-cell-detail"><a href="#popover_avail">详情</a></span>
+							</h5>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-4 grid-cell" >
+					<div class="mui-collapse-content">
+						<h4 class="grid-title">天气对产品影响度</h4>
+						<h2 style="color: purple;">轻微</h2>
+						<div>
+							<h5 class="grid-cell-h5">
+								<span class="grid-cell-detail" style="padding-bottom: 10px;">
+									<a href="#popover_avail">详情</a>
+								</span>
+							</h5>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-8" style="height: 70%;background-color: #E8E8E8;border:5px solid #f2f2f2">
+					<div style="margin-bottom: 10px;">
+						<span style="float: right;position:relative;right:4%;margin-bottom:10px;">
+							<button type="button" id="button_device"  class="mui-btn mui-btn-primary mui-btn-outlined"> 设备名称</button>
+							<button type="button" id="button_time"  class="mui-btn mui-btn-primary mui-btn-outlined" >时间范围</button>
+							<button type="button" id="button_type" class="mui-btn mui-btn-primary mui-btn-outlined" >类型</button>
+						</span>
+					</div>
+					<div id="main" style="left:20px;width:100%;top:20px;height:400px"></div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-4" style="height: 70%;background-color: #E8E8E8;border:5px solid #f2f2f2">
+					<div style=" height: 409px;">
+						<div class="mui-scroll-wrapper">
+							<div class="grid-cell-warn-title" style="text-align: left;padding:0px	 10px;font-size: 20px;">
+								
+								<label>告警中心：</label>
+								<div style="float: right;margin-top: -15px;">
+									<img id="img_warn" src="../images/warn.png">
+								</div>
+							</div>
+							<div class="mui-scroll">
+								<table class="grid-cell-warn-table">
+									<tr>
+										<td style="width: 40%;">内容</td>
+										<td style="width: 20%;">状态</td>
+										<td style="width: 40%;">日期</td>
+									</tr>
+									<tr>
+										<td>三号配料巴杀机跳零</td>
+										<td>待解决</td>
+										<td>2017-09-01 12:00</td>
+									</tr>
+									<tr>
+										<td>三号配料巴杀机跳零</td>
+										<td>解决</td>
+										<td>2017-09-01 12:00</td>
+									</tr>
+									<tr>
+										<td>三号配料巴杀机跳零</td>
+										<td>解决</td>
+										<td>2017-09-01 12:00</td>
+									</tr>
+									<tr class="tr_warn">
+										<td>四号配料巴杀机跳零</td>
+										<td>未解决</td>
+										<td>2017-09-01 12:00</td>
+									</tr>
+									<tr>
+										<td>三号配料巴杀机跳零</td>
+										<td>解决</td>
+										<td>2017-09-01 12:00</td>
+									</tr>
+									<tr>
+										<td>三号配料巴杀机跳零</td>
+										<td>解决</td>
+										<td>2017-09-01 12:00</td>
+									</tr>
+
+								</table>
+								<div class="mui-content-padded">
+
+									<ul class="mui-pager">
+										<li class="mui-previous">
+											<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined grid-pager" style="  left: -50px;">
+												上一页
+											</button>
+										</li>
+										<li class="mui-next">
+											<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined grid-pager" style="  right: -50px;">
+												下一页
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</li>
+			</ul>
+
+		</div>
+
+		<!-- 瞬时消耗水量 -->
+		<div id="popover_water" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell header">
+							<table>
+								<tr>
+									<td class="popover_tool">计量表</td>
+									<td class="popover_data">数据</td>
+									<td class="popover_time">日期</td>
+								</tr>
+							</table>
+						</li>
+						<li class="mui-table-view-cell body">
+							<table>
+								<tr>
+									<td class="popover_tool">电磁水表01</td>
+									<td class="popover_data">0.03吨</td>
+									<td class="popover_time">2017-09-28 02:50</td>
+								</tr>
+							</table>
+						</li>
+						<li class="mui-table-view-cell body">
+							<table>
+								<tr>
+									<td class="popover_tool">电磁水表02</td>
+									<td class="popover_data">0.03吨</td>
+									<td class="popover_time">2017-09-28 02:50</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 瞬时消耗电量 -->
+		<div id="popover_elec" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell header">
+							<table>
+								<tr>
+									<td class="popover_tool">计量表</td>
+									<td class="popover_data">数据</td>
+									<td class="popover_time">日期</td>
+								</tr>
+							</table>
+						</li>
+						<li class="mui-table-view-cell body">
+							<table>
+								<tr>
+									<td class="popover_tool">电表01</td>
+									<td class="popover_data">2.9度</td>
+									<td class="popover_time">2017-09-28 02:50</td>
+								</tr>
+							</table>
+						</li>
+						<li class="mui-table-view-cell body">
+							<table>
+								<tr>
+									<td class="popover_tool">电表02</td>
+									<td class="popover_data">2.1度</td>
+									<td class="popover_time">2017-09-28 02:50</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 瞬时消耗蒸汽量 -->
+		<div id="popover_steam" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell header">
+							<table>
+								<tr>
+									<td class="popover_tool">计量表</td>
+									<td class="popover_data">数据</td>
+									<td class="popover_time">日期</td>
+								</tr>
+							</table>
+						</li>
+						<li class="mui-table-view-cell body">
+							<table>
+								<tr>
+									<td class="popover_tool">气表01</td>
+									<td class="popover_data">0.02立方米</td>
+									<td class="popover_time">2017-09-28 02:50</td>
+								</tr>
+							</table>
+						</li>
+						<li class="mui-table-view-cell body">
+							<table>
+								<tr>
+									<td class="popover_tool">气表02</td>
+									<td class="popover_data">0.02立方米</td>
+									<td class="popover_time">2017-09-28 02:50</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="popover_avail" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<table>
+								<tr>
+									<td >数据:</td>
+									<td class="popover_time"><button type="button" style="width: 70%;"  id="button_month"  class="mui-btn mui-btn-primary mui-btn-outlined" onclick="MonthClick()">日期范围</button></td>
+								</tr>
+							</table>
+						</li>
+						<li class="mui-table-view-cell body">
+							<table>
+								<tr>
+									<td class="popover_tool">气表01</td>
+									<td class="popover_data">0.02立方米</td>
+									<td class="popover_time">2017-09-28 02:50</td>
+								</tr>
+							</table>
+						</li>
+						<li class="mui-table-view-cell body">
+							<table>
+								<tr>
+									<td class="popover_tool">气表02</td>
+									<td class="popover_data">0.02立方米</td>
+									<td class="popover_time">2017-09-28 02:50</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.js"></script>
+		<script type="text/javascript" src="../js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../libs/echarts-all.js"></script>
+		<script type="text/javascript">
+			mui.init()
+
+			mui('.mui-scroll-wrapper').scroll();
+		</script>
+		<script type="text/javascript" src="../js/monitoring.js"></script>
+	</body>
+
+</html>

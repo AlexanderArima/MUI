@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>报告</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<link rel="stylesheet" href="../css/report.css" />
+		<style type="text/css">
+			div {
+				text-align: center;
+			}
+			
+			table {
+				border: 0px solid #222222;
+				width: 95%;
+				position: relative;
+				left: 11px;
+			}
+			
+			table td {
+				border: 0px solid #222222;
+				border-right: 1px solid black;
+			}
+			
+			table td:last-child {
+				border: 0px solid #222222;
+				border-right: 0px solid black;
+			}
+			/*设置列表高亮颜色*/
+			
+			.mui-table-view-cell.mui-active {
+				background-color: #FFFFFF;
+			}
+			
+			.td1 {
+				width: 12.5%;
+			}
+			
+			.td2 {
+				width: 12.5%;
+			}
+			
+			.td3 {
+				width: 12.5%;
+			}
+			
+			.td4 {
+				width: 12.5%;
+			}
+			
+			.td5 {
+				width: 12.5%;
+			}
+			
+			.td6 {
+				width: 12.5%;
+			}
+			
+			.td7 {
+				width: 12.5%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 菜单容器 -->
+				<aside id="offSlide" class="mui-off-canvas-right" style="background:none;width:100%;">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<!-- 菜单具体展示内容 -->
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">2017年6月工厂设备能耗表</li>
+
+								<li class="mui-table-view-cell">
+									<table class="table_header">
+										<th>
+											<td class="td1">工厂名称</td>
+											<td class="td2">常温工厂</td>
+											<td class="td3">能源类型</td>
+											<td class="td4">日期</td>
+											<td class="td5">区域名称</td>
+											<td class="td6">设备名称</td>
+											<td class="td6">仪表名称</td>
+											<td class="td7">累计能耗(kw.h)</td>
+
+										</th>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">马鞍山低温</td>
+											<td class="td2">一车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月1日</td>
+											<td class="td5">配料</td>
+											<td class="td6">巴沙机01</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">100</td>
+										</tr>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+
+											<td class="td1">马鞍山低温</td>
+											<td class="td2">一车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月2日</td>
+											<td class="td5">配料</td>
+											<td class="td6">巴沙机02</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">105</td>
+										</tr>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">马鞍山低温</td>
+											<td class="td2">二车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月3日</td>
+											<td class="td5">配料</td>
+											<td class="td6">巴沙机03</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">102</td>
+										</tr>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">马鞍山低温</td>
+											<td class="td2">二车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月4日</td>
+											<td class="td5">配料</td>
+											<td class="td6">巴沙机04</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">103</td>
+										</tr>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">马鞍山低温</td>
+											<td class="td2">三车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月5日</td>
+											<td class="td5">配料</td>
+											<td class="td6">巴沙机05</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">102</td>
+										</tr>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">泰安低温</td>
+											<td class="td2">一车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月6日</td>
+											<td class="td5">混料</td>
+											<td class="td6">混料机01</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">102</td>
+										</tr>
+									</table>
+								</li>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">泰安低温</td>
+											<td class="td2">二车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月7日</td>
+											<td class="td5">混料</td>
+											<td class="td6">混料机02</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">102</td>
+										</tr>
+									</table>
+								</li>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">泰安低温</td>
+											<td class="td2">三车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月8日</td>
+											<td class="td5">混料</td>
+											<td class="td6">混料机03</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">102</td>
+										</tr>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">泰安低温</td>
+											<td class="td2">三车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月8日</td>
+											<td class="td5">混料</td>
+											<td class="td6">混料机04</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">105</td>
+										</tr>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<table>
+										<tr>
+											<td class="td1">泰安低温</td>
+											<td class="td2">三车间</td>
+											<td class="td3">电能</td>
+											<td class="td4">6月8日</td>
+											<td class="td5">混料</td>
+											<td class="td6">混料机06</td>
+											<td class="td6">智能电表</td>
+											<td class="td7">101</td>
+										</tr>
+									</table>
+								</li>
+								<li class="mui-table-view-cell">
+									<div class="mui-content-padded">
+										<ul class="mui-pager">
+											<li class="mui-previous">
+												<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined grid-pager" style="  left: -50px;">
+												上一页
+												</button>
+											</li>
+											<li class="mui-next">
+												<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined grid-pager" style="  right: -50px;">
+												下一页
+												</button>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</aside>
+
+				<!-- 主页面标题 
+    <header class="mui-bar mui-bar-nav">
+    
+      <h1 class="mui-title">报表</h1>
+    </header>-->
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper" style="background:white;    margin-top: 40px;">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<div style="height: 100%;width:100%;background:white;">
+							<!--区域菜单 -->
+							<ul class="mui-table-view mui-grid-view mui-grid-9" style="background:white;">
+								<!-- 一级菜单 -->
+								<li id="li_nav1" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+
+										<div class="mui-scroll">
+											<a class="mui-control-item area" index="1">
+												常温工厂
+											</a>
+											<a class="mui-control-item area mui-active" index="2">
+												低温工厂
+											</a>
+											<a class="mui-control-item area" index="3">
+												冰激凌工厂
+											</a>
+										</div>
+									</div>
+								</li>
+								<!-- 二级菜单 -->
+								<li id="li_nav2" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<div class="mui-scroll">
+
+											<a class="mui-control-item area" index="0">
+												华东工厂
+											</a>
+											<a class="mui-control-item area mui-active" index="1">
+												华中工厂
+											</a>
+											<a class="mui-control-item area " index="2">
+												华北工厂
+											</a>
+											<a class="mui-control-item area" index="3">
+												华南工厂
+											</a>
+										</div>
+									</div>
+								</li>
+								<!-- 三级菜单 -->
+								<li id="li_nav3" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<div class="mui-scroll">
+											<a class="mui-control-item area">
+												泰安低温厂
+											</a>
+											<a class="mui-control-item area mui-active">
+												马鞍山低温厂
+											</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!--能源类型菜单 -->
+							<ul class="mui-table-view mui-grid-view mui-grid-9" style="background:white;">
+								<li id="li_nav1_1" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<div class="mui-scroll">
+
+											<a id='item1_water' class="mui-control-item type mui-active" index="1">
+												水
+											</a>
+											<a id='item1_energy' class="mui-control-item type" index="2">
+												电
+											</a>
+											<a id='item1_steam' class="mui-control-item type" index="4mui-control-item">
+												蒸汽
+											</a>
+										</div>
+									</div>
+								</li>
+								<!-- 二级菜单 -->
+								<li id="li_nav2_energy" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<div class="mui-scroll">
+											<a class="mui-control-item type mui-active" index="1">
+												工业用电
+											</a>
+
+										</div>
+									</div>
+								</li>
+								<li id="li_nav2_water" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<div class="mui-scroll">
+
+											<a class="mui-control-item type " index="1">
+												纯水
+											</a>
+											<a class="mui-control-item type mui-active" index="2">
+												软水
+											</a>
+										</div>
+									</div>
+								</li>
+								<li id="li_nav2_steam" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<div class="mui-scroll">
+											<a class="mui-control-item type" index="1">
+												常压蒸汽
+											</a>
+											<a class="mui-control-item type mui-active" index="1">
+												高压蒸汽
+											</a>
+
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!--时间菜单 -->
+							<ul class="mui-table-view mui-grid-view mui-grid-9" style="background:white;">
+								<li id="li_nav111" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<div class="mui-scroll">
+											<a class="mui-control-item date" index="0">
+												2014年
+											</a>
+											<a class="mui-control-item date" index="1">
+												2015年
+											</a>
+											<a class="mui-control-item date" index="2">
+												2016年
+											</a>
+											<a class="mui-control-item date mui-active" index="4mui-control-item">
+												2017年
+											</a>
+										</div>
+									</div>
+								</li>
+								<!-- 二级菜单 -->
+								<li id="li_nav222" style="display: none;" class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 grid-cell">
+									<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+										<div class="mui-scroll">
+
+											<a class="mui-control-item date" index="1">
+												1月
+											</a>
+											<a class="mui-control-item date" index="3">
+												2 月
+											</a>
+											<a class="mui-control-item date" index="4">
+												3月
+											</a>
+											<a class="mui-control-item date" index="5">
+												4月
+											</a>
+											<a class="mui-control-item date" index="6">
+												5月
+											</a>
+											<a class="mui-control-item date" index="7">
+												6 月
+											</a>
+											<a class="mui-control-item date" index="8">
+												7月
+											</a>
+											<a class="mui-control-item date " index="10">
+												8月
+											</a>
+											<a class="mui-control-item date mui-active" index="9">
+												9月
+											</a>
+
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<a href="#offSlide" style="height:50px;line-height:50px;margin:0 auto;color:white;background: dodgerblue;font-size:30px;border-radius: 2px;padding:10px;">搜索</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.js"></script>
+		<script type="text/javascript" src="../js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../libs/echarts-all.js"></script>
+		<script type="text/javascript" src="../js/datasearch.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+
+	</body>
+
+</html>
